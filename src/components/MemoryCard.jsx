@@ -3,7 +3,11 @@ import React, { Component } from "react";
 class MemoryCard extends Component {
     render() {
         return (
-       <h1>CARD</h1> )
+      <div class="MemoryCard">
+                   <img class="dcimg"
+                   src="https://www.digitalcrafts.com/img/digitalcrafts-logo-white-y.png
+                   " alt=""/>
+      </div> )
     }
 }
 
