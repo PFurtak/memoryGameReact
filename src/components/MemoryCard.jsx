@@ -6,3 +6,5 @@ class MemoryCard extends Component {
        <h1>CARD</h1> )
     }
 }
+
+export default MemoryCard;
