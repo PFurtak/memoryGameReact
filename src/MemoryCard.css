@@ -43,8 +43,7 @@
   );
 }
 
-.MemoryCardInner,
-.flipped {
+.MemoryCardInner.flipped {
   transform: rotateY(180deg);
 }
 
@@ -53,10 +52,10 @@
   padding-top: 13px;
 }
 
-.row {
+/* .row {
   display: flex;
   justify-content: center;
-}
+} */
 
 .board {
   padding-top: 30px;
