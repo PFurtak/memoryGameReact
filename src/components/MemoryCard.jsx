@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 
 class MemoryCard extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isFlipped: false
+    };
+  }
+
   clickHandler = () => {
-    alert('card clicked');
+    this.setState({ isFlipped: !this.state.isFlipped });
   };
 
   render() {
