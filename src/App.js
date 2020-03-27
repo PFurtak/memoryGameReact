@@ -52,8 +52,8 @@ class App extends Component {
       return card;
     });
     if (newPickedCards.length === 2) {
-      const card1Index = newPickedCards[0];
-      const card2Index = newPickedCards[1];
+      let card1Index = newPickedCards[0];
+      let card2Index = newPickedCards[1];
       if (newDeck[card1Index].symbol !== newDeck[card2Index].symbol) {
         setTimeout(this.unflipCards.bind(this, card1Index, card2Index), 1000);
       }
@@ -63,8 +63,10 @@ class App extends Component {
   };
 
   unflipCards = (card1Index, card2Index) => {
-    const card1 = { ...this.state.deck[card1Index] };
-    const card2 = { ...this.state.deck[card2Index] };
+    let card1 = { ...this.state.deck[card1Index] };
+    let card2 = { ...this.state.deck[card2Index] };
+    card1.isFlipped = false;
+    card2.isFlipped = false;
 
     let newDeck = this.state.deck.map((card, index) => {
       if (card1Index === index) {
